@@ -1,0 +1,41 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: mostpopularbadges
+    description: "Most Popular Batches"
+    columns:
+      - name: No_of_User
+        tests:
+          - not_null
+  - name: testwhosedisplaynau
+    description: "Print the text of questions asked by user whose display name contains the string “nau”"
+    columns:
+      - name: Text
+        tests:
+          - not_null
+  - name: alexandrulquestion
+    description: "Print the text of questions asked by user whose display name is alexandrul."
+    columns:
+       - name: Text
+         tests:
+           - not_null
+       - name: DisplayName
+         tests:
+           - not_null
